@@ -29,10 +29,11 @@ public class Execute01 {
         String sql3= "drop table workers";
         st.execute(sql3);
 
-
-
         //5.step: bağlantı ve Statement i kapat.
+        con.close();
+        st.close();
 
-
+//DDL== create, drop, alter--> bunlarda execute() methodu;
+// DQL==select--->burada executeQuery() methodu kullanulır, sadece execute() methodunu kullanırsak kod çalışır ama boolean return ettiği için gelen datayı göremem..
     }
 }
